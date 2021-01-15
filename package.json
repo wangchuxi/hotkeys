@@ -67,7 +67,7 @@
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-react": "7.20.0",
     "gh-pages": "2.2.0",
-    "husky": "4.2.3",
+    "husky": "4.3.8",
     "jest": "25.2.7",
     "kkt": "5.10.3",
     "puppeteer": "2.1.1",
