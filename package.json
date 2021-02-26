@@ -1,0 +1,45 @@
+{
+  "name": "@template/uiw",
+  "version": "6.7.2",
+  "description": "Use uiw for the project.",
+  "private": true,
+  "scripts": {
+    "start": "kkt start",
+    "build": "kkt build",
+    "test": "kkt test --env=jsdom",
+    "test:coverage": "kkt test --env=jsdom --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kktjs/kkt.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "uiw": "4.7.12"
+  },
+  "devDependencies": {
+    "@kkt/less-modules": "^6.7.2",
+    "@kkt/scope-plugin-options": "^6.7.2",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.1",
+    "@uiw/react-github-corners": "^1.2.0",
+    "@uiw/react-mac-keyboard": "^1.0.5",
+    "@uiw/react-markdown-preview": "^2.1.1",
+    "kkt": "6.7.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
