@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import GithubCorner from '@uiw/react-github-corners';
+import { Github } from '@uiw/react-shields';
+
 // import logo from './logo.svg';
 import KeyBoard from '@uiw/react-mac-keyboard';
 // import MarkdownPreview from '@uiw/react-markdown-preview';
+import Footer from './components/Footer';
 
 import styles from './App.module.css';
 import './App.css';
 import pkg from '../package.json';
+
 
 declare type KeyCodeData = {
   keycode: number;
@@ -19,7 +23,18 @@ const App = () => {
   const [keyStr, setKeyStr] = useState([]);
   const [keyCode, setKeyCode] = useState([]);
 
-  // useEffect(()=>)
+  useEffect(() => {
+    return document.removeEventListener('keyup', onKeyUpEvent);
+    // function pkeys(keys, key) {
+    //   if (keys.indexOf(key) === -1) keys.push(key);
+    //   return keys;
+    // }
+  });
+
+  const onKeyUpEvent = () => {
+    setKeyCode([]);
+    setKeyStr([]);
+  }
 
   const openVersionWebsite: OpenVersionWebsite = (e) => {
     if (e.target && e.target.value) {
@@ -83,7 +98,14 @@ const App = () => {
         keyCode={keyCode}
       />
       {/* <MarkdownPreview style={{ maxWidth: 995, margin: '0 auto' }} source={DocumentStrSource} /> */}
-
+      <Footer name="Kenny Wong" href="http://jaywcjlove.github.io" year="2015-present">
+        <Github user="jaywcjlove" repo="hotkeys">
+          <Github.Social href="https://github.com/jaywcjlove/hotkeys" type="forks" />
+          <Github.Social href="https://github.com/jaywcjlove/hotkeys" type="stars" />
+          <Github.Social href="https://github.com/jaywcjlove/hotkeys" type="watchers" />
+          <Github.Social href="https://github.com/jaywcjlove/hotkeys" type="followers" />
+        </Github>
+      </Footer>
     </div >
   )
 };

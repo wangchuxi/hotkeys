@@ -13,7 +13,7 @@
     "noImplicitAny": true,
     "resolveJsonModule": true,
     "sourceMap": true,
-    "baseUrl": "./src",
+    "baseUrl": "website",
     "typeRoots": [
       "./node_modules/@types"
     ],
@@ -31,6 +31,8 @@
     "noEmit": true
   },
   "include": [
+    "website",
+    "website/**/*",
     "src/**/*",
     ".kktrc.ts"
   ],
